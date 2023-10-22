@@ -1,3 +1,5 @@
+import java.util.Random; 
+
 /*
  * Representa un cuchillo
  * @author A. Valeria Deloya Andrade
@@ -7,11 +9,14 @@ public class Cuchillo{
     /* Nombre del tipo de corte del cuchillo */
     private String corte;
 
+    /*Tipos de cortes.*/
+    String[] tipos = {"Corte juliana", "Corte brunoise", "Corte torneado", "Corte Rondelle"};
+
     /*
      * Constructor
      */
-    public Platillo(String corte){
-        corte = this.corte;
+    public Cuchillo(){
+        this.corte = tipoDeCorte();
     }
 
     /*
@@ -19,6 +24,12 @@ public class Cuchillo{
      */
     public String getCorte(){
         return this.corte;
+    }
+
+    public String tipoDeCorte(){
+        Random random = new Random();
+        int i = random.nextInt(tipos.length);
+        return tipos[i];
     }
 
     /*

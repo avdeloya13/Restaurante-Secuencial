@@ -7,7 +7,7 @@ import java.util.Random;
 public class Cuchillo{
 
     /* Nombre del tipo de corte del cuchillo */
-    private String corte;
+    private String corte = tipoDeCorte(); //se inicializa con un tipo random
 
     /*Tipos de cortes.*/
     String[] tipos = {"Corte juliana", "Corte brunoise", "Corte torneado", "Corte Rondelle"};
@@ -15,8 +15,16 @@ public class Cuchillo{
     /*
      * Constructor
      */
+    public Cuchillo(String corte){
+        this.corte = corte; 
+        //si tiene en tipo de corte en especial cambia lo inicializado por ese especial
+    }
+
+     /*
+     * Constructor vacío, usado para cuando no se quiere un tipo de cuchillo en especial
+     */
     public Cuchillo(){
-        this.corte = tipoDeCorte();
+        
     }
 
     /*
@@ -32,10 +40,7 @@ public class Cuchillo{
         return tipos[i];
     }
 
-    /*
-     * toString para imprimir cuchillos
-     */
-    public String toString(){
-        return "\nTipo de Corte: "+this.corte+"\n";
+    public String cortando(){
+        return " usa su cuchillo " + this.corte +"\n";
     }
 }

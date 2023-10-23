@@ -26,42 +26,21 @@ public class Platillo{
      * Obtiene el nombre del platillo
      */
     public String getNombre(){
-        return this.nombre;
+        return nombre;
    }
 
    /*
      * Obtiene el precio del platillo
      */
-    public String getPrecio(){
-        return this.precio;
+    public int getPrecio(){
+        return precio;
    }
 
    /*
      * Obtiene el tiempo de coccion del platillo
      */
-    public String getCoccion(){
-        return this.coccion;
-   }
-
-    /*
-     * Modifica el nombre del platillo
-     */
-    public void setNombre(String nombre){
-    this.nombre = nombre;
-    }
-
-    /*
-     * Modifica el precio del platillo
-     */
-    public void setPrecio(int precio){
-    this.precio = precio;
-    }
-
-    /*
-     * Modifica el tiempo de coccion del platillo
-     */
-    public void setCoccion(int coccion){
-    this.coccion = coccion;
+    public int getCoccion(){
+        return coccion;
     }
 
     /*

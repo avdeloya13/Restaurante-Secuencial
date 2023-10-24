@@ -6,7 +6,7 @@ import java.util.Random;
  */
 public class Cuchillo{
 
-    /* Nombre del tipo de corte del cuchillo */
+    /* Tipo de corte del cuchillo, es lo que lo va a caracterizar de entre los otros cuchillos*/
     private String corte = tipoDeCorte(); //se inicializa con un tipo random
 
     /*Tipos de cortes.*/

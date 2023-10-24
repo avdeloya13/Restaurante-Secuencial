@@ -30,6 +30,6 @@ public class Cliente{
 
     public void AgregaPlatillosyCobra(Platillo platillo){
         platillos.add(platillo);
-        gastos += platillo.getPrecio();
+        gastos += platillo.getPrecio(); //le cobramos desde antes
     }
 }

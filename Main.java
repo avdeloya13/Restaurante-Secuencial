@@ -1,7 +1,7 @@
 
 public class Main extends Thread{
 
-    /* Total del dia */
+    /* Dinero total ganado en el dia */
     public int total;
 
     public static void main(String [] args){
@@ -15,29 +15,56 @@ public class Main extends Thread{
         Platillo chilaquiles = new Platillo("Chilaquiles", 20, 1000);
         Platillo enchiladas = new Platillo("Enchiladas", 30, 1000);
 
+        //-----------------------------------------------------------------
+
         Cliente james = new Cliente("James");
-        Cliente inez = new Cliente("Inez");
-        Cliente betty = new Cliente("Betty");
-        Cliente alison = new Cliente("Alison");
 
-        james.AgregaPlatillos(pizza);
-        james.AgregaPlatillos(pozole);
-        james.AgregaPlatillos(barbacoa);
-
-        inez.AgregaPlatillos(pescadillas);
-        inez.AgregaPlatillos(pizza);
-        inez.AgregaPlatillos(enchiladas);
-
-        betty.AgregaPlatillos(polloAsado);
-        betty.AgregaPlatillos(enchiladas);
-
-        alison.AgregaPlatillos(carneEnchilada);
-        alison.AgregaPlatillos(chilaquiles);
+        james.AgregaPlatillosyCobra(pizza);
+        james.AgregaPlatillosyCobra(pozole);
+        james.AgregaPlatillosyCobra(barbacoa);
 
         Cocinero dorothea = new Cocinero("Dorothea", james);
-        Cocinero rebeca = new Cocinero("Rebeca", inez, "corte mirepoix");
+
+        //-----------------------------------------------------------------
+
+        Cliente inez = new Cliente("Inez");
+
+        inez.AgregaPlatillosyCobra(pescadillas);
+        inez.AgregaPlatillosyCobra(pizza);
+        inez.AgregaPlatillosyCobra(enchiladas);
+
+        Cocinero rebeca = new Cocinero("Rebeca", inez, "corte mirepoix"); //cuchillo especial
+
+        //-----------------------------------------------------------------
+
+        Cliente betty = new Cliente("Betty");
+
+        betty.AgregaPlatillosyCobra(polloAsado);
+        betty.AgregaPlatillosyCobra(enchiladas);
+
         Cocinero abigail = new Cocinero("Abigail", betty);
+
+        //-----------------------------------------------------------------
+
+        Cliente alison = new Cliente("Alison");
+
+        alison.AgregaPlatillosyCobra(carneEnchilada);
+        alison.AgregaPlatillosyCobra(chilaquiles);
+
         Cocinero joe = new Cocinero("Joe", alison);
+
+        
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
 
 
     }

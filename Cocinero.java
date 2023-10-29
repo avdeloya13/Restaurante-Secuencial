@@ -60,7 +60,7 @@ public class Cocinero extends Thread{
         return cuchillo;
     }
     
-    public void cocinar(){
+    public String cocinar(){
 
        System.out.println("El cliente " + cliente.getNombre() + " ordenó " + cliente.getPlatillos() + ". Cocinero asignado: " + 
                             getNombre());
@@ -80,17 +80,10 @@ public class Cocinero extends Thread{
                 excepcion.printStackTrace();
             }
 
+        System.out.println("El cocinero " + getNombre() + " ha cocinado el platillo " + platillo);
+
        }
+
+       return "El cocinero " + getNombre() + " ha cocinado todos los platillos del cliente " + cliente.getNombre();
     }
-
- 
-    /*public void cocinarPlatillos() {
-        
-            System.out.println(nombre + " ha terminado de cocinar " + platillo.getNombre());
-            cliente.satisfacerPlatillo(platillo);
-
-        }
-        System.out.println(nombre + " ha terminado de cocinar para " + cliente.getNombre());
-    }*/
-
 }

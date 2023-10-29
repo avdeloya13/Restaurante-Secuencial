@@ -7,31 +7,50 @@ import java.util.ArrayList;
 
 public class Cliente{
 
+    /* Nombre del cliente. */
     private String nombre;
 
+    /* Lista de platillos del cliente. */
     private ArrayList<Platillo> platillos;
 
+    /* Lo que va a gastar en total por sus platillos. */
     private int gastos;
 
+    /* 
+     * Constructor de Cliente.
+     * @param nombre El nombre del cliente
+     */
     public Cliente(String nombre) {
         this.nombre = nombre;
         platillos = new ArrayList<>();
     }
 
+    /*
+     * Obtiene el nombre del cliente.
+     */
     public String getNombre() {
         return nombre;
     }
 
-    public ArrayList<Platillo> getPlatillos() {
+    /*
+     * Obtiene la lista de platillos del cliente.
+     */
+    public ArrayList<Platillo> getPlatillos(){
         return platillos;
     }
 
-    public int getGastos() {
+    /*
+     * Obtiene los gastos en platillos del cliente.
+     */
+    public int getGastos(){
         return gastos;
     }
 
+    /*
+     * Agrega platillos a su arraylist de platillos y le va cobrando por estos.
+     */
     public void AgregaPlatillosyCobra(Platillo platillo){
-        platillos.add(platillo);
+        platillos.add(platillo); //agregamos los platillos que a va comer
         gastos += platillo.getPrecio(); //le cobramos desde antes
     }
 }

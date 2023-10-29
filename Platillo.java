@@ -6,17 +6,20 @@
 
 public class Platillo{
 
-    /* Nombre del platillo */
+    /* Nombre del platillo. */
     private String nombre;
     
-    /* Precio del platillo */
+    /* Precio del platillo. */
     private int precio; 
    
-    /* Tiempo de coccion */
+    /* Tiempo de coccion. */
     private int coccion;
 
     /*
-     * Constructor
+     * Constructor de Platillo.
+     * @param nombre El nombre del platillo
+     * @param precio El precio del platillo
+     * @param coccion El tiempo de coccion del platillo
      */
     public Platillo(String nombre, int precio, int coccion){
         nombre = this.nombre;
@@ -25,28 +28,28 @@ public class Platillo{
     }
 
     /*
-     * Obtiene el nombre del platillo
+     * Obtiene el nombre del platillo.
      */
     public String getNombre(){
         return nombre;
    }
 
    /*
-     * Obtiene el precio del platillo
+     * Obtiene el precio del platillo.
      */
     public int getPrecio(){
         return precio;
    }
 
    /*
-     * Obtiene el tiempo de coccion del platillo
+     * Obtiene el tiempo de coccion del platillo.
      */
     public int getCoccion(){
         return coccion;
     }
 
     /*
-     * toString para imprimir platillos
+     * toString para imprimir platillos.
      */
     public String toString(){
         return "\nNombre: "+this.nombre+

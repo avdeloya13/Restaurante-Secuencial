@@ -6,7 +6,7 @@
 
 public class TiaAly{
 
-    /* Total del dinero ganado durante el dia */
+    /* Total del dinero ganado durante el dia. */
     public static int total;
  
     public static void main(String [] args){

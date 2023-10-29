@@ -1,10 +1,11 @@
+import java.util.ArrayList;
 
 /**
  * Representa un cocinero de Tia Aly.
  * @author A. Valeria Deloya Andrade
  */
 
-public class Cocinero{
+public class Cocinero extends Thread{
 
     /* Nombre del cocinero */
     private String nombre;
@@ -13,10 +14,10 @@ public class Cocinero{
     private Cliente cliente; 
 
     /*Cuchillo del cocinero*/
-    private Cuchillo tipo;
+    private Cuchillo cuchillo;
 
     /*
-     * Constructor de Cocinero
+     * Constructor de Cocinero.
      * @param nombre El nombre del cocinero
      * @param cliente El cliente del cocinero
      * @param corte El corte de su cuchillo especial
@@ -24,37 +25,72 @@ public class Cocinero{
     public Cocinero(String nombre, Cliente cliente, String corte){
         nombre = this.nombre;
         cliente = this.cliente;
-        tipo = new Cuchillo(corte);
+        cuchillo = new Cuchillo(corte);
     }
 
     /*
-     * Constructor de Cocinero
+     * Constructor de Cocinero.
      * @param nombre El nombre del cocinero
      * @param cliente El cliente del cocinero
      */
     public Cocinero(String nombre, Cliente cliente){
         nombre = this.nombre;
         cliente = this.cliente;
-        tipo = new Cuchillo();
+        cuchillo = new Cuchillo();
     }
 
-    public String getNombre() {
+    /*
+     * Obtiene el nombre del cocinero
+     */
+    public String getNombre(){
         return nombre;
     }
 
-    public Cliente getCliente() {
+    /*
+     * Obtiene el cliente del cocinero.
+     */
+    public Cliente getCliente(){
         return cliente;
     }
 
-    public Cuchillo getTipo() {
-        return tipo;
+    /*
+     * Obtiene el cuchillo del cocinero.
+     */
+    public Cuchillo getCuchilloCocinero(){
+        return cuchillo;
     }
     
-    public String cocinar(){
-        
+    public void cocinar(){
 
-        return null;
+       System.out.println("El cliente " + cliente.getNombre() + " ordenó " + cliente.getPlatillos() + ". Cocinero asignado: " + 
+                            getNombre());
+
+       //Recorrera los platillos del cliente almacenados en la arraylist
+       ArrayList<Platillo> platillos = cliente.getPlatillos();
+       for (Platillo platillo : platillos) {
+
+        System.out.println("El cocinero " + getNombre() + " cocina el platillo " + platillo + 
+                            cuchillo.cortando());
+
+        int coccion = platillo.getCoccion();
+
+            try{ 
+                Thread.sleep(coccion); //se simula el tiempo de coccion con sleep
+            } catch (InterruptedException excepcion) {
+                excepcion.printStackTrace();
+            }
+
+       }
     }
 
+ 
+    /*public void cocinarPlatillos() {
+        
+            System.out.println(nombre + " ha terminado de cocinar " + platillo.getNombre());
+            cliente.satisfacerPlatillo(platillo);
+
+        }
+        System.out.println(nombre + " ha terminado de cocinar para " + cliente.getNombre());
+    }*/
 
 }

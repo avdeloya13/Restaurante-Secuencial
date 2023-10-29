@@ -56,5 +56,4 @@ public class Platillo{
             "\nPrecio: "+this.precio+
             "\nTiempo de coccion: "+this.coccion+"\n";
     }
-
 }

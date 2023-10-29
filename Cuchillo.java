@@ -13,6 +13,7 @@ public class Cuchillo{
     /*Tipos de cortes.*/
     String[] tipos = {"Corte juliana", "Corte brunoise", "Corte torneado", "Corte Rondelle"};
 
+    /*Para saber si se tiene o no un cuchillo especial */
     boolean especial;
 
     /*
@@ -48,10 +49,14 @@ public class Cuchillo{
         return tipos[i];
     }
 
+    /*
+     * Para cuando se esta cortando teniendo o no un cuchillo especial.
+     * @return mensaje de corte dependiendo de si se tiene o no un cuchillo especial
+     */
     public String cortando(){
         if(especial){
-            return " con su cuchillo especial " + this.corte +"\n";
+            return " con su cuchillo especial " + getCorte() +"\n";
         }
-        return " con un cuchillo " + this.corte +"\n";
+        return " con un cuchillo " + getCorte() +"\n";
     }
 }

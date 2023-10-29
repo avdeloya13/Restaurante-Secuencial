@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 
 /*
- * Representa un cliente 
+ * Representa un cliente de Tia Aly.
+ *  @author A. Valeria Deloya Andrade 
  */
+
 public class Cliente{
 
     private String nombre;
@@ -24,7 +26,7 @@ public class Cliente{
         return platillos;
     }
 
-    public String getGastos() {
+    public int getGastos() {
         return gastos;
     }
 

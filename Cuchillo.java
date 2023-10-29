@@ -1,9 +1,10 @@
 import java.util.Random; 
 
 /*
- * Representa un cuchillo
+ * Representa un cuchillo.
  * @author A. Valeria Deloya Andrade
  */
+
 public class Cuchillo{
 
     /* Tipo de corte del cuchillo, es lo que lo va a caracterizar de entre los otros cuchillos*/

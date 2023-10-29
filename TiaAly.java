@@ -1,9 +1,14 @@
 
-public class Main extends Thread{
+/*
+ * Clase principal.
+ * @author A. Valeria Deloya Andrade
+ */
 
-    /* Dinero total ganado en el dia */
-    public int total;
+public class TiaAly{
 
+    /* Total del dinero ganado durante el dia */
+    public static int total;
+ 
     public static void main(String [] args){
         
         Platillo polloAsado = new Platillo("Pollo Asado", 50, 4000);
@@ -25,6 +30,8 @@ public class Main extends Thread{
 
         Cocinero dorothea = new Cocinero("Dorothea", james);
 
+        total += james.getGastos();
+
         //-----------------------------------------------------------------
 
         Cliente inez = new Cliente("Inez");
@@ -35,6 +42,8 @@ public class Main extends Thread{
 
         Cocinero rebeca = new Cocinero("Rebeca", inez, "corte mirepoix"); //cuchillo especial
 
+        total += inez.getGastos();
+
         //-----------------------------------------------------------------
 
         Cliente betty = new Cliente("Betty");
@@ -43,6 +52,8 @@ public class Main extends Thread{
         betty.AgregaPlatillosyCobra(enchiladas);
 
         Cocinero abigail = new Cocinero("Abigail", betty);
+
+        total += betty.getGastos();
 
         //-----------------------------------------------------------------
 
@@ -53,19 +64,11 @@ public class Main extends Thread{
 
         Cocinero joe = new Cocinero("Joe", alison);
 
-        
+        total += alison.getGastos();
 
-        
+        //-----------------------------------------------------------------
 
-        
-
-        
-
-        
-        
-        
-        
-
+        System.out.println("Tia Aly ha cerrado por hoy.\n" + "Ingresos del día: " + total);
 
     }
 }

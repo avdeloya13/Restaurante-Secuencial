@@ -1,7 +1,9 @@
+
 /**
- * Representa un cocinero.
+ * Representa un cocinero de Tia Aly.
  * @author A. Valeria Deloya Andrade
  */
+
 public class Cocinero{
 
     /* Nombre del cocinero */
@@ -48,6 +50,11 @@ public class Cocinero{
         return tipo;
     }
     
+    public String cocinar(){
+        
+
+        return null;
+    }
 
 
 }

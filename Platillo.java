@@ -1,7 +1,9 @@
+
 /*
  * Clase que representa Platillos.
  * @author A. Valeria Deloya Andrade
  */
+
 public class Platillo{
 
     /* Nombre del platillo */

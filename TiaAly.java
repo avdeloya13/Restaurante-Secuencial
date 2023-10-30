@@ -20,9 +20,6 @@ public class TiaAly{
         Platillo chilaquiles = new Platillo("Chilaquiles", 20, 1000);
         Platillo enchiladas = new Platillo("Enchiladas", 30, 1000);
 
-
-        System.out.println("AAAA" + enchiladas.getPrecio());
-
         //-----------------------------------------------------------------
 
         Cliente james = new Cliente("James");

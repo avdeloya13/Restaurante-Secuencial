@@ -53,7 +53,7 @@ public class Cliente{
         String nombres = "";
 
         for (Platillo platillo : this.platillos){
-            nombres += platillo.getNombre();
+            nombres += platillo.getNombre() + ", ";
         }
         return nombres;
     }

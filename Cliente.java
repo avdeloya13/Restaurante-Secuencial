@@ -40,6 +40,13 @@ public class Cliente{
     }
 
     /*
+     * Obtiene los platillos que quiere el cliente.
+     */
+    public ArrayList<Platillo> getPlatillos(){
+        return this.platillos;
+    }
+
+    /*
      * Obtiene los nombres de los platillos del cliente.
      */
     public String NombresPlatillos(){

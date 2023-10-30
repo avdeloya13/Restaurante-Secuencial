@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-
 /**
  * Representa un cocinero de Tia Aly.
  * @author A. Valeria Deloya Andrade
@@ -24,8 +23,8 @@ public class Cocinero extends Thread{
      * @param corte El corte de su cuchillo especial
      */
     public Cocinero(String nombre, Cliente cliente, String corte){
-        nombre = this.nombre;
-        cliente = this.cliente;
+        this.nombre = nombre;
+        this.cliente = cliente;
         cuchillo = new Cuchillo(corte);
     }
 
@@ -35,8 +34,8 @@ public class Cocinero extends Thread{
      * @param cliente El cliente del cocinero
      */
     public Cocinero(String nombre, Cliente cliente){
-        nombre = this.nombre;
-        cliente = this.cliente;
+        this.nombre = nombre;
+        this.cliente = cliente;
         cuchillo = new Cuchillo();
     }
 
@@ -44,7 +43,7 @@ public class Cocinero extends Thread{
      * Obtiene el nombre del cocinero
      */
     public String getNombreCocinero(){
-        return nombre;
+        return this.nombre;
     }
     
     /*
@@ -54,7 +53,7 @@ public class Cocinero extends Thread{
     public String cocinar(){
 
         System.out.println("El cliente " + cliente.getNombre() + " ha ordenado " + cliente.NombresPlatillos() + 
-                        ". Cocinero asignado: " + getNombreCocinero());
+                        ". El cocinero que va a prepararlos: " + getNombreCocinero());
 
         //Va a recorrer los platillos del cliente almacenados en la arraylist
         ArrayList<Platillo> platillos = cliente.getPlatillos();

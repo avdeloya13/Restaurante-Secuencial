@@ -29,21 +29,21 @@ public class Cliente{
      * Obtiene el nombre del cliente.
      */
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     /*
      * Obtiene los platillos del cliente.
      */
     public ArrayList<Platillo> getPlatillos(){
-        return platillos;
+        return this.platillos;
     }
 
     /*
      * Obtiene los gastos en platillos del cliente.
      */
     public int getGastos(){
-        return gastos;
+        return this.gastos;
     }
 
     /*
@@ -52,7 +52,7 @@ public class Cliente{
     public String NombresPlatillos(){
         String nombres = "";
 
-        for (Platillo platillo : platillos){
+        for (Platillo platillo : this.platillos){
             nombres += platillo.getNombre();
         }
         return nombres;

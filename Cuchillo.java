@@ -22,7 +22,7 @@ public class Cuchillo{
      */
     public Cuchillo(String corte){
         this.corte = corte; 
-        especial = true;
+        this.especial = true;
         //usado cuando SI tiene en tipo de corte en especial cambia lo inicializado por ese especial
     }
 
@@ -45,7 +45,7 @@ public class Cuchillo{
      */
     public String tipoDeCorte(){
         Random random = new Random();
-        int i = random.nextInt(tipos.length);
+        int i = random.nextInt(this.tipos.length);
         return tipos[i];
     }
 
@@ -54,7 +54,7 @@ public class Cuchillo{
      * @return mensaje de corte dependiendo de si se tiene o no un cuchillo especial
      */
     public String cortando(){
-        if(especial){
+        if(this.especial){
             return " con su cuchillo especial " + getCorte() +"\n";
         }
         return " con un cuchillo " + getCorte() +"\n";

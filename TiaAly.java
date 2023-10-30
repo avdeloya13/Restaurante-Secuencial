@@ -20,6 +20,9 @@ public class TiaAly{
         Platillo chilaquiles = new Platillo("Chilaquiles", 20, 1000);
         Platillo enchiladas = new Platillo("Enchiladas", 30, 1000);
 
+
+        System.out.println("AAAA" + enchiladas.getPrecio());
+
         //-----------------------------------------------------------------
 
         Cliente james = new Cliente("James");
@@ -29,6 +32,10 @@ public class TiaAly{
         james.AgregaPlatillosyCobra(barbacoa);
 
         Cocinero dorothea = new Cocinero("Dorothea", james);
+
+        System.out.println("PPPP" + james.NombresPlatillos());
+
+        System.out.println("TTTTT" + james.getGastos());
 
         total += james.getGastos();
         dorothea.cocinar();

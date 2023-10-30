@@ -22,30 +22,30 @@ public class Platillo{
      * @param coccion El tiempo de coccion del platillo
      */
     public Platillo(String nombre, int precio, int coccion){
-        nombre = this.nombre;
-        precio = this.precio;
-        coccion = this.coccion;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.coccion = coccion;
     }
 
     /*
      * Obtiene el nombre del platillo.
      */
     public String getNombre(){
-        return nombre;
+        return this.nombre;
    }
 
    /*
      * Obtiene el precio del platillo.
      */
     public int getPrecio(){
-        return precio;
+        return this.precio;
    }
 
    /*
      * Obtiene el tiempo de coccion del platillo.
      */
     public int getCoccion(){
-        return coccion;
+        return this.coccion;
     }
 
 }

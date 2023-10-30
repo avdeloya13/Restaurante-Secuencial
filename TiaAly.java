@@ -30,8 +30,8 @@ public class TiaAly{
 
         Cocinero dorothea = new Cocinero("Dorothea", james);
 
-        dorothea.cocinar();
         total += james.getGastos();
+        dorothea.cocinar();
 
         //-----------------------------------------------------------------
 
@@ -43,8 +43,8 @@ public class TiaAly{
 
         Cocinero rebeca = new Cocinero("Rebeca", inez, "corte mirepoix"); //cuchillo especial
 
-        rebeca.cocinar();
         total += inez.getGastos();
+        rebeca.cocinar();
 
         //-----------------------------------------------------------------
 
@@ -55,8 +55,8 @@ public class TiaAly{
 
         Cocinero abigail = new Cocinero("Abigail", betty);
 
-        abigail.cocinar();
         total += betty.getGastos();
+         abigail.cocinar();
 
         //-----------------------------------------------------------------
 
@@ -67,8 +67,8 @@ public class TiaAly{
 
         Cocinero joe = new Cocinero("Joe", alison);
 
-        joe.cocinar();
         total += alison.getGastos();
+        joe.cocinar();
 
         //-----------------------------------------------------------------
 

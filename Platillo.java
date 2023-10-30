@@ -48,12 +48,4 @@ public class Platillo{
         return coccion;
     }
 
-    /*
-     * toString para imprimir platillos.
-     */
-    /*public String toString(){
-        return "\nNombre: "+this.nombre+
-            "\nPrecio: "+this.precio+
-            "\nTiempo de coccion: "+this.coccion+"\n";
-    }*/
 }

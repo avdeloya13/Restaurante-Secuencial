@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+
 /**
  * Representa un cocinero de Tia Aly.
  * @author A. Valeria Deloya Andrade
@@ -11,10 +12,10 @@ public class Cocinero extends Thread{
     private String nombre;
     
     /* Cliente del cocinero*/
-    private Cliente cliente; 
+    public Cliente cliente; 
 
     /*Cuchillo del cocinero*/
-    private Cuchillo cuchillo;
+    public Cuchillo cuchillo;
 
     /*
      * Constructor de Cocinero.
@@ -42,7 +43,7 @@ public class Cocinero extends Thread{
     /*
      * Obtiene el nombre del cocinero
      */
-    public String getNombre(){
+    public String getNombreCocinero(){
         return nombre;
     }
     
@@ -52,15 +53,15 @@ public class Cocinero extends Thread{
      */
     public String cocinar(){
 
-        System.out.println("El cliente " + cliente.getNombre() + " ordenó " + cliente.getPlatillos() + ". Cocinero asignado: " + 
-                            getNombre());
+        System.out.println("El cliente " + cliente.getNombre() + " ha ordenado " + cliente.NombresPlatillos() + 
+                        ". Cocinero asignado: " + getNombreCocinero());
 
         //Va a recorrer los platillos del cliente almacenados en la arraylist
         ArrayList<Platillo> platillos = cliente.getPlatillos();
         for (Platillo platillo : platillos) {
 
         //Preparacion de un platillo
-        System.out.println("El cocinero " + getNombre() + " cocina el platillo " + platillo + 
+        System.out.println("El cocinero " + getNombreCocinero() + " cocina el platillo " + platillo + 
                             cuchillo.cortando()); 
 
         int coccion = platillo.getCoccion();
@@ -71,9 +72,9 @@ public class Cocinero extends Thread{
                 excepcion.printStackTrace();
             }
 
-        System.out.println("El cocinero " + getNombre() + " ha cocinado el platillo " + platillo);
+        System.out.println("El cocinero " + getNombreCocinero() + " ha cocinado el platillo " + platillo);
         }
 
-        return "El cocinero " + getNombre() + " ha cocinado todos los platillos del cliente " + cliente.getNombre();
+        return "El cocinero " + getNombreCocinero() + " ha cocinado todos los platillos del cliente " + cliente.getNombre();
     }
 }

@@ -17,17 +17,19 @@ public class Cuchillo{
     boolean especial = false;
 
     /*
-     * Constructor de Cuchillo.
+     * Constructor de Cuchillo, con cuchillo especial.
      * @param corte Tipo de corte
      */
     public Cuchillo(String corte){
         this.corte = corte; 
         this.especial = true;
         //usado cuando SI tiene en tipo de corte en especial cambia lo inicializado por ese especial
+        //es especial porque nadie mas va a usar este cuchillo
     }
 
      /*
-     * Constructor de Cuchillo, usado para cuando NO se quiere un tipo de cuchillo en especial.
+     * Constructor de Cuchillo, usado para cuando NO se tiene un tipo de 
+     * cuchillo especial.
      */
     public Cuchillo(){
 

@@ -50,17 +50,17 @@ public class Cocinero extends Thread{
      * Metodo en el que el cocinero hace los platillos de su cliente
      * @return un mensaje de que todos los platillos han sido preparados
      */
-    public String cocinar(){
+    public void cocinar(){
 
         System.out.println("El cliente " + cliente.getNombre() + " ha ordenado " + cliente.NombresPlatillos() + 
-                        ". El cocinero que va a prepararlos: " + getNombreCocinero());
+                        "\nVa a prepararlos el cocinero: " + getNombreCocinero());
 
         //Va a recorrer los platillos del cliente almacenados en la arraylist
         ArrayList<Platillo> platillos = cliente.getPlatillos();
         for (Platillo platillo : platillos) {
 
         //Preparacion de un platillo
-        System.out.println("El cocinero " + getNombreCocinero() + " cocina el platillo " + platillo + 
+        System.out.println("El cocinero " + getNombreCocinero() + " prepara el platillo " + platillo.getNombre() + 
                             cuchillo.cortando()); 
 
         int coccion = platillo.getCoccion();
@@ -71,9 +71,10 @@ public class Cocinero extends Thread{
                 excepcion.printStackTrace();
             }
 
-        System.out.println("El cocinero " + getNombreCocinero() + " ha cocinado el platillo " + platillo);
+        System.out.println("El cocinero " + getNombreCocinero() + " ha terminado de preparar el platillo " +platillo.getNombre());
         }
 
-        return "El cocinero " + getNombreCocinero() + " ha cocinado todos los platillos del cliente " + cliente.getNombre();
+        System.out.println("El cocinero " + getNombreCocinero() + " ha preparado todos los platillos del cliente " + cliente.getNombre() + 
+                        ", le cobra $" + cliente.getGastos() + "\n" + "---------------------------------------------------------------------------" + "\n");
     }
 }

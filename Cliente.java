@@ -33,13 +33,6 @@ public class Cliente{
     }
 
     /*
-     * Obtiene los platillos del cliente.
-     */
-    public ArrayList<Platillo> getPlatillos(){
-        return this.platillos;
-    }
-
-    /*
      * Obtiene los gastos en platillos del cliente.
      */
     public int getGastos(){
@@ -53,7 +46,7 @@ public class Cliente{
         String nombres = "";
 
         for (Platillo platillo : this.platillos){
-            nombres += platillo.getNombre() + ", ";
+            nombres += "| " + platillo.getNombre() + " | ";
         }
         return nombres;
     }
